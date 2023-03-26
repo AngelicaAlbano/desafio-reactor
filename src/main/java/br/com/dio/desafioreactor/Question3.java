@@ -5,8 +5,8 @@ import reactor.core.publisher.Mono;
 public class Question3 {
 
   /*
-  Verifica se o usuário passado é valido, caso seja retorna void, caso contrário deve disparar uma exception
-  (para esse desafio vamos considerar que o usário é valido quando ele tem uma senha com mais de 8 caractéres)
+  Verifica se o usuário passado é valido, se sim, retorna void, se não dispara uma exception
+  regra: usuário é válido quando sua senha possui 8 ous mais caracteres)
    */
   public Mono<Void> userIsValid(final User user) {
     if (user == null || user.password().length() <= 8) {
